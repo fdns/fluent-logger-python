@@ -91,7 +91,7 @@ class FluentSender(object):
         except Exception as e:
             self.last_error = e
             bytes_ = self._make_packet(label, timestamp,
-                                       {"level": "CRITICAL",
+                                       {"level": 2,
                                         "message": "Can't output to log",
                                         "traceback": traceback.format_exc()})
         return self._send(bytes_)
